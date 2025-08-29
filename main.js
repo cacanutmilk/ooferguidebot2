@@ -8,10 +8,10 @@ require('dotenv').config(); // <-- Load .env variables
 
 // ---- Config from environment variables ----
 const DISCORD_TOKEN = process.env.TOKEN;
-const CLIENT_ID = process.env.CLIENT_ID;
-const GUILD_ID = process.env.GUILD_ID;
-const LOG_CHANNELID = process.env.LOG_CHANNELID;
-const LOG_USERID = process.env.LOG_USERID;
+const CLIENT_ID = process.env.CLIENT_ID || '1410778738211160104';
+const GUILD_ID = process.env.GUILD_ID || '1235781527506255934';
+const LOG_CHANNELID = process.env.LOG_CHANNELID || '1407323966128783360';
+const LOG_USERID = process.env.LOG_USERID || '941309399341887529';
 const PORT = process.env.PORT || 10000;
 
 // ---- Express KeepAlive Server ----
@@ -109,6 +109,8 @@ client.once("ready", () => {
 (async () => {
     try {
         console.log("🟡 Attempting to login...");
+        console.log("DEBUG - Token exists:", !!DISCORD_TOKEN);
+        console.log("DEBUG - Token length:", DISCORD_TOKEN ? DISCORD_TOKEN.length : 0);
         await client.login(DISCORD_TOKEN);
     } catch (error) {
         console.error("❌ Login failed:", error);
@@ -119,4 +121,3 @@ client.once("ready", () => {
 // ---- Exit Hooks ----
 process.on("beforeExit", (code) => console.warn(`⚠️ Bot is about to exit with code: ${code}`));
 process.on("exit", (code) => console.warn(`⚠️ Bot exited with code: ${code}`));
-
