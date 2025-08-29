@@ -12,7 +12,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const GUILD_ID = process.env.GUILD_ID;
 const LOG_CHANNELID = process.env.LOG_CHANNELID;
 const LOG_USERID = process.env.LOG_USERID;
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 8000;
 
 // ---- Express KeepAlive Server ----
 const app = express();
