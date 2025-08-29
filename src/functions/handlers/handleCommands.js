@@ -5,8 +5,8 @@ require('dotenv').config(); // Load environment variables
 
 // ---- Config from environment variables ----
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
-const CLIENT_ID = process.env.CLIENT_ID;
-const GUILD_ID = process.env.GUILD_ID;
+const CLIENT_ID = process.env.CLIENT_ID || '1410778738211160104';
+const GUILD_ID = process.env.GUILD_ID || '1235781527506255934';
 
 async function handleCommands(client) {
     const commands = [];
