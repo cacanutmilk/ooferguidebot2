@@ -12,7 +12,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const GUILD_ID = process.env.GUILD_ID;
 const LOG_CHANNELID = process.env.LOG_CHANNELID;
 const LOG_USERID = process.env.LOG_USERID;
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
 
 // ---- Express KeepAlive Server ----
 const app = express();
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     res.send('Bot is alive..!');
 });
 
-app.listen(PORT, () => console.log(`[KeepAlive] Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`[KeepAlive] Server running on port ${PORT}`));
 
 // ---- Discord Client Setup ----
 const client = new Client({
