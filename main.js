@@ -7,7 +7,7 @@ const { handleEvents } = require('./src/functions/handlers/handleEvents');
 require('dotenv').config(); // <-- Load .env variables
 
 // ---- Config from environment variables ----
-const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
+const DISCORD_TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 const GUILD_ID = process.env.GUILD_ID;
 const LOG_CHANNELID = process.env.LOG_CHANNELID;
@@ -119,3 +119,4 @@ client.once("ready", () => {
 // ---- Exit Hooks ----
 process.on("beforeExit", (code) => console.warn(`⚠️ Bot is about to exit with code: ${code}`));
 process.on("exit", (code) => console.warn(`⚠️ Bot exited with code: ${code}`));
+
