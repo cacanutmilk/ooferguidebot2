@@ -11,11 +11,3 @@ services:
         value: production
       - key: DISCORD_TOKEN
         sync: false
-      - key: CLIENT_ID
-        sync: false
-      - key: GUILD_ID
-        sync: false
-      - key: LOG_CHANNELID
-        sync: false
-      - key: LOG_USERID
-        sync: false
