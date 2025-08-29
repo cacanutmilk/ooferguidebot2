@@ -1,7 +1,7 @@
 const { Events } = require('discord.js');
 
-const CLIENT_ID = process.env.CLIENT_ID;
-const GUILD_ID = process.env.GUILD_ID;
+const CLIENT_ID = process.env.CLIENT_ID || '1410778738211160104';
+const GUILD_ID = process.env.GUILD_ID || '1235781527506255934';
 
 module.exports = {
     name: Events.ClientReady,
@@ -12,3 +12,4 @@ module.exports = {
         console.log(`Guild ID: ${GUILD_ID}`);
     },
 };
+
